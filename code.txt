@@ -1,0 +1,19 @@
+//code js
+document.addEventListener('DOMContentLoaded', function () {
+        var flashMessage = document.getElementById('flash').dataset.flash;
+        if (flashMessage) {
+        Notiflix.Report.success(
+            'Success', // Title
+            flashMessage, // Your custom message
+            'Okay', // Button text
+            {
+                timeout: 3000,
+                clickToClose: true,
+            }
+        );
+       }
+});
+
+//link
+<link rel="stylesheet" href="{{ asset('assets/backend/plugins/notiflix/notiflix-3.2.7.min.css') }}" />
+  <script src="{{ asset('assets/backend/plugins/notiflix/notiflix-report-aio-3.2.7.min.js') }}"></script>
